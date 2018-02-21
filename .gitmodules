@@ -1,3 +1,6 @@
 [submodule "src/libs/Simple-Web-Server"]
 	path = src/libs/Simple-Web-Server
 	url = https://github.com/eidheim/Simple-Web-Server.git
+[submodule "src/libs/PJON"]
+	path = src/libs/PJON
+	url = https://github.com/gioblu/PJON.git

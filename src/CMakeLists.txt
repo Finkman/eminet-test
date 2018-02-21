@@ -1,5 +1,5 @@
 ######## Project settings ########
-PROJECT(EmiNetTest)
+PROJECT(EmiNetTest CXX)
 SET(LICENSE "MIT")
 cmake_minimum_required (VERSION VERSION 3.1.0)
 set(CMAKE_CXX_STANDARD 14)
@@ -18,9 +18,9 @@ add_executable(
 	${SOURCES}
 )
 
-#TARGET_LINK_LIBRARIES(
-#	fsr3 PRIVATE fs3generic
-#)
+TARGET_LINK_LIBRARIES(
+	eminet_test PRIVATE pjon simple-web-server
+)
 
 ######## Install targets ########
 INSTALL(TARGETS eminet_test
