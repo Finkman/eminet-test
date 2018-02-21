@@ -19,7 +19,7 @@ add_executable(
 )
 
 TARGET_LINK_LIBRARIES(
-	eminet_test PRIVATE pjon simple-web-server
+	eminet_test PRIVATE pjon simple-web-server args
 )
 
 ######## Install targets ########
