@@ -4,3 +4,6 @@
 [submodule "src/libs/PJON"]
 	path = src/libs/PJON
 	url = https://github.com/gioblu/PJON.git
+[submodule "src/libs/args"]
+	path = src/libs/args
+	url = https://github.com/Taywee/args.git

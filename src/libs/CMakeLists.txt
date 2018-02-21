@@ -1,4 +1,5 @@
 add_subdirectory(Simple-Web-Server)
+add_subdirectory(args)
 
 
 ### Add sources of pjon ###
