@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 cmake_policy(SET CMP0022 NEW)
 
 ######## Build and include settings ########
-#add_subdirectory(libfs3generic)
+add_subdirectory(libs)
 
 file(GLOB SOURCES
 	"./*.cpp"
