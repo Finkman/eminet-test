@@ -13,14 +13,15 @@ import { DevicelistComponent } from './devicelist/devicelist.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
-
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeviceviewerComponent,
     DevicelistComponent,
-    MessagesComponent
+    MessagesComponent,
+    ConfigurationComponent
   ],
   imports: [
     NgbModule.forRoot(), BrowserModule, HttpClientModule,
