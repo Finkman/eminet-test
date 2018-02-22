@@ -8,6 +8,8 @@
 #ifndef COMPONENTS_INCLUDE_WEBAPI_WEBAPI_HPP_
 #define COMPONENTS_INCLUDE_WEBAPI_WEBAPI_HPP_
 
+#include <memory>
+
 namespace emi {
   namespace components {
     class WebApi
@@ -16,7 +18,11 @@ namespace emi {
       WebApi( int port );
 
     private:
-      int m_port;
+      class Impl;
+
+      explicit WebApi( std::unique_ptr< Impl > impl );
+
+      std::unique_ptr< Impl > m_impl;
     };
   }
 }
