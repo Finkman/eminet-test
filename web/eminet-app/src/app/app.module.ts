@@ -12,13 +12,16 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { DeviceService } from './device.service';
 import { DevicelistComponent } from './devicelist/devicelist.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DeviceviewerComponent,
-    DevicelistComponent
+    DevicelistComponent,
+    MessagesComponent
   ],
   imports: [
     NgbModule.forRoot(), BrowserModule, HttpClientModule,
@@ -27,7 +30,7 @@ import { AppRoutingModule } from './app-routing.module';
     ),
     AppRoutingModule
   ],
-  providers: [InMemoryDataService, DeviceService],
+  providers: [InMemoryDataService, DeviceService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
