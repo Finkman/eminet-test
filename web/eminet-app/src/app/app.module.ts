@@ -11,6 +11,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { DeviceService } from './device.service';
 import { DevicelistComponent } from './devicelist/devicelist.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DevicelistComponent } from './devicelist/devicelist.component';
     NgbModule.forRoot(), BrowserModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    AppRoutingModule
   ],
   providers: [InMemoryDataService, DeviceService],
   bootstrap: [AppComponent]

@@ -16,6 +16,7 @@ export class DevicelistComponent implements OnInit {
   constructor(private deviceService: DeviceService) { }
 
   ngOnInit() {
+    this.getDeviceList();
   }
 
   getDeviceList(): void {
