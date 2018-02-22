@@ -10,6 +10,10 @@
 
 #include <WebApi/WebApi.hpp>
 
+#include <server_http.hpp>
+
+using HttpServer = SimpleWeb::Server< SimpleWeb::HTTP >;
+
 namespace emi {
   namespace components {
 
@@ -20,6 +24,7 @@ namespace emi {
 
     private:
       int m_port;
+      HttpServer server;
     };
   }
 }
