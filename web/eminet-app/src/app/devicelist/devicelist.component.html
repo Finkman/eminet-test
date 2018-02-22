@@ -1,6 +1,9 @@
 <h2>Device List</h2>
-<ul class="devices">
-  <li *ngFor="let device of deviceList">
-    {{device.name}}
-  </li>
-</ul>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel *ngFor="let device of deviceList" title="{{device.name}}">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

@@ -1,9 +1,10 @@
-<div *ngIf="messageService.messages.length">
+<div *ngIf="messageService.messages.length" class="container-fluid">
 
   <h2>Messages</h2>
-  <button class="clear" (click)="messageService.clear()">clear</button>
-  <ul class="message">
-    <li *ngFor='let message of messageService.messages'>
-      <span>{{message.sender}}:</span> {{message.message}} </li>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-danger" *ngFor='let message of messageService.messages'>
+      <strong>{{message.sender}}:</strong> {{message.message}}
+    </li>
   </ul>
+  <button class="clear" (click)="messageService.clear()">clear</button>
 </div>
