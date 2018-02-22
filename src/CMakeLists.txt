@@ -8,6 +8,7 @@ cmake_policy(SET CMP0022 NEW)
 
 ######## Build and include settings ########
 add_subdirectory(libs)
+add_subdirectory(components)
 
 file(GLOB SOURCES
 	"./*.cpp"
