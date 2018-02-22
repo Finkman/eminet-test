@@ -6,6 +6,10 @@ export class DeviceDescriptor {
   device: string;
   iVersion: number;
   fwVersion: number;
+  capabilities: {
+    input: object[];
+    output: object[];
+  };
 }
 
 export class Device {

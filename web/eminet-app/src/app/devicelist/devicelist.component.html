@@ -1,9 +1,42 @@
 <h2>Device List</h2>
 
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+<ngb-accordion #acc="ngbAccordion">
   <ngb-panel *ngFor="let device of deviceList" title="{{device.name}}">
     <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+      <div class="card">
+        <div class="card-header">
+          Info</div>
+        <div class="card-block">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td>Device</td>
+                <td>{{device.descriptor.device}}</td>
+              </tr>
+              <tr>
+                <td>Class</td>
+                <td>{{device.descriptor.class}}</td>
+              </tr>
+              <tr>
+                <td>Serialnumber</td>
+                <td>{{device.descriptor.sn}}</td>
+              </tr>
+              <tr>
+                <td>Fw-Version</td>
+                <td>V{{device.descriptor.fwVersion / 100 | number:'0.2-2'}}</td>
+              </tr>
+              <tr>
+                <td>Inputs</td>
+                <td>{{device.descriptor.capabilities.input.length}}</td>
+              </tr>
+              <tr>
+                <td>Outputs</td>
+                <td>{{device.descriptor.capabilities.output.length}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </ng-template>
   </ngb-panel>
 </ngb-accordion>

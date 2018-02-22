@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { DecimalPipe } from '@angular/common';
 import { Device, DeviceDescriptor } from '../device'
 import { DeviceService } from '../device.service'
 
