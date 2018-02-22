@@ -1,19 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
+import { DeviceviewerComponent } from './deviceviewer/deviceviewer.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { DeviceService } from './device.service';
+import { DevicelistComponent } from './devicelist/devicelist.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DeviceviewerComponent,
+    DevicelistComponent
   ],
   imports: [
-  NgbModule.forRoot(), BrowserModule
+    NgbModule.forRoot(), BrowserModule, HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
+  providers: [InMemoryDataService, DeviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
